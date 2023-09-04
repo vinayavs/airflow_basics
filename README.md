@@ -61,3 +61,7 @@ Go to Admin -> Connections and Edit "postgres_default" set this values:
 - Schema : airflow
 - Login : airflow
 - Password : airflow
+
+## Connect Elastic Airflow docker
+To start es docker:
+- `docker-compose -f docker-compose-es.yaml up -d`
