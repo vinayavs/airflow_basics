@@ -43,8 +43,13 @@ If you want to run airflow sub-commands and access airflow CLI:
 - `docker-compose run --rm webserver airflow list_dags` - List dags
 - `docker-compose run --rm webserver airflow test [DAG_ID] [TASK_ID] [EXECUTION_DATE]` - Test specific task
 
-If you want to run/test python script, you can do so like this:
-- `docker-compose run --rm webserver python /usr/local/airflow/dags/[PYTHON-FILE].py` - Test python script
+Airflow default config location:
+- `docker cp airflow_basics-airflow-scheduler-1:/opt/airflow/airflow.cfg`
+
+## flower UI 
+To connect flower:
+- `docker-compose down && docker-compose --profile flower up -d` - To know the celery worker details
+- `http://localhost:5555/`- Flower UI
 
 ## Connect to database
 To connect psql:
